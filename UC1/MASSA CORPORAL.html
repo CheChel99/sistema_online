@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let peso = Number(prompt("informe o peso"));
+        let altura = Number(prompt("informe a altura"));
+        let imc = peso / (altura * altura);
+
+        if (imc < 18.5){
+            alert("a condição é: " +  "abaixo do peso");
+        }else if (imc >= 18.5 && imc < 25){
+            alert ("a condição é: " + "peso normal");
+        }else if (imc >= 25 && imc < 30 ){
+            alert("a condição é: " + "acima do peso");
+        }else if (imc > 30){
+            alert ("a condição é: " + "obeso");
+        }
+    </script>
+</body>
+</html>

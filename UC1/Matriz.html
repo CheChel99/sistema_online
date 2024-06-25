@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let agenda = [];
+            
+        function  cadastrar(){
+          let nome = document.getElementById("nomePessoa").value;  
+          let idade = Number(document.getElementById("idade").value);
+            
+          agenda.push([nome,idade]);
+          
+          console.log(agenda);
+          document.getElementById("nomePessoa").value = "";
+          document.getElementById("idade").value = "";
+
+            listar();
+        }
+        function listar(){
+            let saida = "";
+            for (let i=0; i < agenda.length; i++){
+                saida += agenda[i][0] + " - " + agenda[i][1] + "<br/>";
+            }
+            document.getElementById("lista").innerHTML = saida;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="nomePessoa" name="nomePessoa"
+            placeholder="informe um nome"/>
+            
+            <input type="number" id="idade" name="idade"
+            placeholder="informe a idade"/>
+            
+            <input type="button" value="Gravar"
+            onclick="cadastrar()"/>
+
+    </form>
+    <div id="lista"></div>
+</body>
+</html>

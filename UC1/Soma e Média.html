@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numeros = [];
+
+        function cadastrar(){
+        //Recebendo o valor do campo
+            
+            let n = Number(document.getElementById("num").value);
+        //Adicionando ao vetor    
+            
+            numeros.push(n);
+        //Apenas para verificar
+            
+            console.log(numeros);
+        //Limpando o campo
+        
+        //Listando os elementos
+        Listar();
+        }   
+        
+        function Listar(){
+            let saida = "";
+            for (let i=0; i < numeros.length; i++){
+                saida += numeros[i] + "</br>";
+            }
+            document.getElementById("listar").innerHTML = saida;
+        }
+    
+        function exibirSoma(){
+            alert (calcularSoma());
+        }
+        
+        function calcularSoma(){
+            let soma = 0;
+            for (let i=0; i < numeros.length; i++){
+                soma += numeros[i];
+            }
+            return soma;
+        }
+        
+        function exibirMedia(){
+            let media = calcularSoma() / numeros.length;
+            alert (media);          
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h2>Soma e Média</h2>
+        <input type="number" id="num" name="num"
+            
+            placeholder="informe o número"/>       
+        <input type="button" value="gravar"
+            onclick="cadastrar()"/>
+        
+        <input type="button" value="exibir Soma"
+            onclick="exibirSoma()"/>
+        <input type="button" value="exibir Media"
+            onclick="exibirMedia()"/>
+    </form>
+    <div id="lista" style="background-color:darkolivegreen">
+        Michel
+    </div>
+</body>
+</html>

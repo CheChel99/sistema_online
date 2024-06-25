@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Clientes</h2>
+<a href="{% url 'incluir_marca %" class="btn btn-primary">Incluir nova marca</a>
+<table>
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Telefone</td>
+            <td>E-mail</td>
+            <td>Ações</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for in cliente %}
+        <tr>
+            <td>{{ c.nome }}</td>
+            <td>{{ c.telefone }}</td>
+            <td>{{ c.email }}</td>
+            <td>Alterar Excluir</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    {% endblock %}
+</table>

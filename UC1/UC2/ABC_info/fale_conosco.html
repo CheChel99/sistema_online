@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+</head>
+<body>
+    <form method="post">
+        <div>
+            <span>Nome:</span>        
+            <input type="text" id="nome" name="nome"
+            placeholder="Nome"
+            required="true"/>
+        </div>
+        <div>
+            <span>E-mail:</span>
+            <input type="email" id="email" name="email" 
+            placeholder="E-mail"/>
+        </div>
+        <div>
+            <span>Função:</span>
+            <input type="radio" id="tipo" name="tipo"
+            value="Cliente"/>
+                Cliente
+            <input type="radio" id="tipo" name="tipo"
+            value="Fornecedor"/>
+                Fornecedor
+        </div>
+        <div>
+            <span>interesse:</span>
+            <input type="checkbox" id="interesse" name="interesse"
+            value="consultoria"/>
+                consultoria
+            <input type="checkbox" id="interesse" name="interesse"
+            value="orçamento"/>
+                orçamento
+            <input type="checkbox" id="interesse" name="interesse"
+            value="falar"/>
+                Falar com nossos consultores
+        </div>
+        <div>
+            <select id="estado" name="estado">
+            <option>selecione</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="ES">Espirito Santo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="SP">São Paulo</option>
+            </select>
+        </div>
+        <div>
+            <label>Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+        </div>        
+        <div>
+            <input type="submit" value="enviar"/>
+        </div>
+    </form>
+</body>
+</html>

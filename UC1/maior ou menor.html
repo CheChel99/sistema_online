@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script>
+        let pessoas = [];
+
+        function cadastrar(){
+            let n = Number(document.getElementById("idade").value);
+            let menor  = 0;
+            let maior = 0;
+
+            if (n < 18){
+                pessoas.push("menor");
+                menor = menor + 1;
+            }else{
+                pessoas.push("maior");
+            }
+            document.getElementById("idade").value = "";
+            listar();
+        }
+
+        function relatorio(){
+            let qtdMenor = 0;
+            let qtdMaior = 0;
+            for (let i=0; i < pessoas.length; i++){
+                qtdMneor = qtdMenor + 1;
+                //qtdMenor += 1; "tbm está certo".
+                //qtdMenor ++; "tbm está certo".
+            }else{
+                qtdMaior = qtdMaior + 1;
+            }
+            alert()
+        }
+
+        function listar(){
+            let saida  = "";
+            for (let i=0; i < pessoas.length; i++){
+                saida += pessoas[i] + "<br/>";
+            }
+            document.getElementById("lista").innerHTML = saida;
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <input type="number" id="idade" name="idade"
+            placeholder="informe a idade"/>
+        
+        <input type="button" value="gravar"
+            onclick="cadastrar()"/>
+
+        <input type="button" value="exibir relatorio"
+            onclick="cadastrar()"/>
+        
+        <input type="button" value="relatório"
+            onclick="relatorio()"/>
+    </form>
+    <div id="lista"></div>
+</body>
+</html>

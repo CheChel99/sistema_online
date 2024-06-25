@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* O programa fará a leitura de indeterminados 
+        números e no final informará a soma,
+        a condição de saída e o usuário responder 
+        não (n) para a pergunta "deseja contimuar? 
+        (s/n)" */
+        
+    let soma = 0;
+    let resp = "s";
+    while (resp == "s"){
+        let numero = Number(prompt("número"));
+        soma = soma + numero;
+        resp = prompt("deseja continuar ? (s/n");
+    }
+    alert("A soma é : " + soma);
+    </script>
+</body>
+</html>

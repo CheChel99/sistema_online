@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let resp = ("s");
+       let maior = 0;
+       let menor = 5;
+       let quantidade = 0;
+       let quantidadeFem = 0;
+       let quantidadeTotal = 0;
+       let somaAlturaFem = 0;
+       let somaAlturaTotal = 0;
+
+       while(resp == "s"){
+       let sexo = Number(prompt("informe o sexo"));
+       let altura = Number(prompt("informe a altura"));
+       
+       //Coletando a maior altura
+       if (altura > maior){
+           maior = altura;
+       }
+       //Coletando a menor altura
+       if (altura < menor){
+           menor = altura;
+       }
+       //Coletando a soma e a quantidade do sexo feminino
+       if (sexo == 2){
+        somaAlturaFem = somaAlturaFem + altura;
+        quantidadeFem = quantidadeFem + 1;
+       }
+       somaAlturaTotal = somaAlturaTotal  +altura;
+       quantidadeTotal = quantidadeTotal + 1;
+       resp = prompt("Deseja continuar? (S/N)")
+    } 
+       let mediaAlturaFem = somaAlturaFem/quantidadeFem;
+       let mediaAltura = somaAlturaFem/quantidade;
+       alert("A média da altura do sexo feminino é : " + somaAlturaFem + 
+            "\n A média total é : " + somaAlturaTotal + "\n A maior altura : " + maior +
+            "\n A menor altura : " + menor);
+
+    </script>
+</body>
+</html>

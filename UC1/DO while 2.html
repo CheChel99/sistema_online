@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resp = "";
+       
+        do{
+            let n1 = Number(prompt("número um"));
+            let n2 = Number(prompt("número dois"));
+            let op = prompt("/ * + -");
+            let resultado = 0;
+
+        
+        switch(op){
+            case "/": 
+                resultado = n1 + n2;
+                break;
+            case "+": 
+                resultado = n1 + n2;
+                break;
+            case "-": 
+                resultado = n1 + n2;
+                break;
+            case "*": 
+                resultado = n1 + n2;
+                break;
+            default: 
+                resultado = 0;
+                alert("Operador inválido");
+            }
+            alert("resultado " + resultado); 
+            alert("Deseja continuar (s/n)?");
+        while(resp == "s")
+        }
+    </script>
+</body>
+</html>

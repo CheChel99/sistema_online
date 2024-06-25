@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salario = Number(prompt("informe o salário"));
+        let cargo = prompt("cargo");
+        
+        let valorReajuste = 0;
+        let novoSalario = 0;
+
+        switch(cargo){
+            case"gerente": 
+            valorReajuste = salario * 10/100;
+            break;
+            case"desenvolvedor": 
+            valorReajuste = salario * 15/100;
+            break;
+            case"técnico": 
+            valorReajuste = salario * 20/100;
+            break;
+            default: 
+            alert("cargo inválido");
+        }
+        novoSalario = salario + valorReajuste;
+
+        alert("salário: " + salario + "\nReajuste: " + valorReajuste + "\nNovo Salário: " + novoSalario);
+    </script>
+</body>
+</html>

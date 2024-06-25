@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function somar(){
+        let valorDaHora = Number(document.getElementById("valor Da Hora").value);
+        let numeroDeHoras = Number(document.getElementById("numero De Horas").value);
+        let desconto = Number(document.getElementById("desconto").value);
+        let salario = (valorDaHora * numeroDeHoras) - desconto;
+            alert("O salário do Profissional é : " + salario);
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label> hora: </label> 
+        <input type="number" id="valor Da Hora" name="valor Da Hora">
+        <label> Número de horas: </label> 
+        <input type="number" id="numero De Horas" name="numero De Horas">
+        <label> Desconto: </label> 
+        <input type="number" id="desconto" name="desconto">
+        <input type="button" value="calcular" onclick="somar()">
+    </form>
+</body>
+</html>

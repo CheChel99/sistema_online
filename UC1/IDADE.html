@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let contador0a25 = 0;
+        let contador26a50 = 0;
+        let contador51a75 = 0;
+        let contador76a100 = 0;
+        let resp = "s";
+        while (resp == "s"){
+            let idade = Number(prompt("informe a idade"));
+            if (idade >=0 && idade <=25){
+                contador0a25 = contador0a25 + 1;
+            
+            }else if (idade >=26 && idade <=50){
+                contador26a50 = contador26a50 + 1;
+            
+            }else if (idade >=51 && idade <=75){
+                contador51a75 = contador51a75 + 1;
+           
+            }else if (idade >=76 && idade <=100){
+                contador76a100 = contador76a100 + 1;
+                resp = prompt("Deseja continuar? (s/n");
+            }else{
+                alert("fora da faixa etária");
+            }
+            resp = prompt("deseja continuar? (s/n)");
+        }
+        alert("[0- 25]: " + contador0a25 +
+            "\n[26 - 50]: " + contador26a50 + 
+            "\n[51 - 75]: " + contador51a75 + 
+            "\n[76 - 100]: " + contador76a100);
+        </script>
+</body>
+</html>

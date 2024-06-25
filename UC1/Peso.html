@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let altura = Number(prompt("informe a altura"));
+        let sexo = prompt("informe o sexo");
+        //let peso_homens = (72.7 * altura) - 58;
+        //let peso_mulheres = (62.1 * altura) - 44.7;
+        let pesoIdeal = 0;
+        if (sexo == "m"){
+            pesoIdeal = (72.7 * altura) - 58;
+        } else {
+            pesoIdeal = (62.1 * altura) - 44.7;
+        }
+        alert("o peso ideal é " + pesoIdeal.toFixed(3));
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let nota1 = Number(prompt("informe uma nota"));
+    let nota2 = Number(prompt("informe outra nota"));
+
+    let media = (nota1 + nota2) / 2;
+    if (media >= 8 && media <= 10){
+        alert("A média é: " + media + " - conceito: A");
+    }else if (media >= 7 && media < 8){
+        alert("A média é: " + media + " - conceito: B");
+    }else if (media >= 5 && meida < 7){
+        alert("A média é: " + media + " - conceito: C");
+    }else if (media < 5){
+        alert("A média é: " + media + " - conceito: D");
+    }else{
+        alert("você informou valores acima do permitido");
+    } 
+    </script>
+</body>
+</html>

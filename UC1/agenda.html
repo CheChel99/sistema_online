@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let agenda = [];
+
+        function cadastrar(){
+            let n = document.getElementById("nomePessoa").value;
+            agenda.push(n);
+            console.log(agenda);
+            listar();
+            document.getElementById("nomePessoa").value = "";
+        }
+            function listar(){
+            let saida = "";
+            for (let i= 0; i<agenda.length; i++){
+                saida += agenda[i] + "</br>";
+            }
+            document.getElementById("lista").innerHTML = saida;
+        }
+    
+</script>
+</head>
+<body>
+    <h2>lista de nomes</h2>
+    <form>
+        <input type="text" id="nomePessoa"
+            name="nomePessoa"
+            placeholder="informe o nome"/>
+        <input type="button" value="gravar"
+            onclick="cadastrar()"/>
+    </form>
+    <div id="lista"></div>
+</body>
+</html>

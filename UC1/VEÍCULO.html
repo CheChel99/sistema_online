@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valorVeiculo = Number(prompt("informe o valor do veículo"));
+        let classe = Number(prompt("classe do veícul"));
+        let valorImposto = 0;
+        
+        switch(classe){
+            case 1: 
+            valorImposto = valorVeiculo * 4/100;
+            break;
+            case 2: 
+            valorImposto = valorVeiculo * 3/100;
+            break;
+            case 3: 
+            valorImposto = valorVeiculo * 2/100;
+            break;
+            case 4: 
+            valorImposto = valorVeiculo * 2/100;
+            break;
+            case 5: 
+            valorImposto = valorVeiculo * 1/100;
+            break;
+            case 6: 
+            valorImposto = valorVeiculo * 1/100;
+            break;
+            default: 
+            alert("classe inválida");
+        }
+        
+    </script>
+</body>
+</html>

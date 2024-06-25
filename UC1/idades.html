@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let numero = [];
+        
+        function cadastrar(){
+
+            let n = Number(document.getElementById("num").value);
+
+            numeros.push(n);
+            console.log(numeros);
+        }
+
+        function ExibirSoma(){
+            
+            let soma = 0;
+            for (let i=0; i < numeros.length; i++){
+                soma += numeros [i];
+                alert(i > 18 "Maior" && i < 18 "Menor");
+            } 
+            return soma;
+        }
+
+        function exibirRelatorio(){
+            alert()
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="number" id="num" name="num"
+            placeholder="informe o número"/>
+        
+        <input type="button" value="Exibir a Soma"
+            onclick="cadastrar"/>
+
+        <input type="text" value="Exibir Soma"
+            onclick="ExibirSoma">
+    </form>
+</body>
+</html>
